@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import PlayerCard from "./components/PlayerCard";
+import Navbar from "./components/NavBar";
 
 class App extends React.Component {
   constructor(){
@@ -25,6 +26,7 @@ class App extends React.Component {
     var players = this.state.playerData
     return (
       <div className="App">
+        <Navbar />
         <div className="header">
           <h1> Women's World Cup Players</h1>
          {players.map(player => {
