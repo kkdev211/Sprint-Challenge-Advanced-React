@@ -28,7 +28,7 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <div className="header">
-          <h1> Women's World Cup Players</h1>
+          <h1> USA Women's World Cup Players</h1>
          {players.map(player => {
           return <PlayerCard player={player} />;
         })} 
