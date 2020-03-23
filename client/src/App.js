@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import PlayerList from "./components/PlayerList";
+import PlayerCard from "./components/PlayerCard";
 
 class App extends React.Component {
   constructor(){
     console.log('Constuctor Invoked!');
   super();
   this.state = {
-    playerData: "",
+    playerData: []
     }
   };
 
@@ -22,13 +22,14 @@ class App extends React.Component {
   }
 
   render() {
+    var players = this.state.playerData
     return (
       <div className="App">
         <div className="header">
           <h1> Women's World Cup Players</h1>
-          <PlayerList 
-            user={this.state.playerData}
-          /> 
+         {players.map(player => {
+          return <PlayerCard player={player} />;
+        })} 
         </div>   
       </div>
     );
